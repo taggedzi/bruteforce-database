@@ -3,9 +3,11 @@
 [![CI](https://github.com/duyet/bruteforce-database/actions/workflows/validate.yml/badge.svg)](https://github.com/duyet/bruteforce-database/actions/workflows/validate.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-A curated, community-maintained collection of wordlists for **authorized security testing**, penetration testing, and password analysis.
+![](http://2.bp.blogspot.com/-DBFErnG-8AE/VhJ-z3Y-41I/AAAAAAAADgA/FGCt8naBMKs/s1600/mtyourmind.10001mb.com.png)
 
-> **⚠️ Ethical Use Only:** These wordlists are for testing systems you own or have explicit authorization to test. See our [Code of Conduct](#ethics--responsible-use).
+A collection of wordlists for security testing, penetration testing, and password analysis.
+
+> **Note:** For authorized testing only. Only use on systems you own or have permission to test.
 
 ---
 
@@ -28,15 +30,15 @@ ffuf -u https://FUZZ.example.com -w subdomains-10000.txt
 
 ---
 
-## What's Inside?
+## What's Inside
 
-### 📊 Quick Stats
-- **11+ million** total entries across all wordlists
-- **135+ MB** of curated data
-- **4 main categories**: Passwords, Usernames, Infrastructure, Identities
-- **Validated & Tested** with automated CI/CD
+### Stats
+- 11+ million total entries
+- 135+ MB of data
+- 4 main categories: Passwords, Usernames, Infrastructure, Identities
+- Validated with automated CI/CD
 
-### 🎯 Use Cases
+### Use Cases
 
 | I need to... | Use this wordlist | Why? |
 |-------------|------------------|------|
@@ -53,90 +55,73 @@ ffuf -u https://FUZZ.example.com -w subdomains-10000.txt
 
 ## Available Wordlists
 
-### 🔑 Password Dictionaries
+### Password Dictionaries
 
 #### General Purpose
 - **`1000000-password-seclists.txt`** (1M entries, 8.5 MB)
   - Source: [SecLists](https://github.com/danielmiessler/SecLists) project
-  - Best for: Initial password testing, most common passwords
-  - Quality: ⭐⭐⭐⭐⭐ Industry standard
+  - Use: Initial password testing, most common passwords
 
 - **`2151220-passwords.txt`** (2.1M entries, 20 MB)
   - Source: Dazzlepod.com compilation
-  - Best for: Comprehensive password testing
-  - Quality: ⭐⭐⭐⭐ Large, diverse dataset
+  - Use: Comprehensive password testing
 
 #### Filtered Sets
 - **`8-more-passwords.txt`** (62K entries, 629 KB)
   - Filters: 8+ chars, requires caps + numbers, no consecutive chars
-  - Best for: Testing password policies with complexity requirements
-  - Quality: ⭐⭐⭐⭐ Targeted for modern policies
+  - Use: Testing password policies with complexity requirements
 
 - **`7-more-passwords.txt`** (528K entries, 5 MB)
   - Filters: 7+ chars, numeric-only removed
-  - Best for: Medium-complexity password policies
-  - Quality: ⭐⭐⭐ Good middle ground
+  - Use: Medium-complexity password policies
 
 #### Specialized
 - **`cain.txt`** (307K entries, 2.5 MB)
   - Source: Cain & Abel password cracker
-  - Best for: Classic patterns, keyboard walks, common substitutions
-  - Quality: ⭐⭐⭐⭐ Time-tested patterns
+  - Use: Classic patterns, keyboard walks, common substitutions
 
 - **`bitcoin-brainwallet.lst`** (395K entries, 3.4 MB)
   - Source: Dictionary words used for Bitcoin brainwallets
-  - Best for: Passphrase testing, dictionary attack foundations
-  - Quality: ⭐⭐⭐ Unique use case
+  - Use: Passphrase testing, dictionary attacks
 
 - **`38650-password-sktorrent.txt`** (39K entries, 309 KB)
   - Source: SKTorrent.eu leaked database
-  - Best for: Real-world password patterns
-  - Quality: ⭐⭐⭐ Historical reference
+  - Use: Real-world password patterns
 
 #### Tool-Specific
 - **`uniqpass_v16_password.txt`** (2.1M entries, 20 MB)
-  - Optimized for: [John the Ripper](https://www.openwall.com/john/) wordlist mode
-  - Best for: Hash cracking with JtR
-  - Quality: ⭐⭐⭐⭐ JtR optimized
+  - Source: Optimized for [John the Ripper](https://www.openwall.com/john/)
+  - Use: Hash cracking with JtR
 
-### 👤 Usernames & Identities
+### Usernames & Identities
 
 - **`usernames.txt`** (403K entries, 3.3 MB)
   - Source: US username compilation
-  - Best for: Account enumeration, user testing
-  - Quality: ⭐⭐⭐⭐ Comprehensive US usernames
+  - Use: Account enumeration, user testing
 
 - **`38650-username-sktorrent.txt`** (39K entries, 258 KB)
   - Source: SKTorrent.eu leaked database
-  - Best for: Real-world username patterns
-  - Quality: ⭐⭐⭐ Historical reference
+  - Use: Real-world username patterns
 
 - **`facebook-firstnames.txt`** (4.3M entries, 37 MB)
   - Source: Facebook public first names
-  - Best for: Name-based password testing, identity research
-  - Quality: ⭐⭐⭐⭐⭐ Massive, real-world dataset
+  - Use: Name-based password testing
 
-### 🌍 Geographic Data
+### Geographic Data
 
 - **`us-cities.txt`** (21K entries, 199 KB)
-  - All US cities
-  - Best for: Location-based password testing
-  - Quality: ⭐⭐⭐⭐ Complete US coverage
+  - Use: Location-based password testing
 
 - **`indo-cities.txt`** (102 entries, 1.2 KB)
-  - Indonesian cities
-  - Best for: Regional password testing
-  - Quality: ⭐⭐⭐ Regional coverage
+  - Use: Regional password testing
 
-### 🌐 Infrastructure Testing
+### Infrastructure Testing
 
 - **`subdomains-10000.txt`** (10K entries, 97 KB)
-  - Most common subdomain names
-  - Best for: Subdomain enumeration, DNS reconnaissance
-  - Quality: ⭐⭐⭐⭐ Essential for recon
+  - Use: Subdomain enumeration, DNS reconnaissance
   - Tools: [Sublist3r](https://github.com/aboul3la/Sublist3r), [ffuf](https://github.com/ffuf/ffuf), [gobuster](https://github.com/OJ/gobuster)
 
-### 📁 Forced Browsing / Directory Discovery
+### Forced Browsing / Directory Discovery
 
 **`forced-browsing/`** directory contains specialized wordlists for web application testing:
 
@@ -287,7 +272,7 @@ curl https://api.example.com/check-username -d "username=FUZZ" -w usernames.txt
 
 ## Automation & Quality
 
-This repository includes intelligent automation:
+This repository includes automation tools:
 
 ### Validation Tools
 
@@ -308,11 +293,11 @@ python3 scripts/deduplicate.py --all
 ### CI/CD Pipeline
 
 Every commit and pull request is automatically:
-- ✅ Validated for encoding and format
-- ✅ Checked for file corruption
-- ✅ Scanned for sensitive data
-- ✅ Analyzed for statistics
-- ✅ Verified for integrity
+- Validated for encoding and format
+- Checked for file corruption
+- Scanned for sensitive data
+- Analyzed for statistics
+- Verified for integrity
 
 See [`.github/workflows/validate.yml`](.github/workflows/validate.yml)
 
@@ -353,16 +338,16 @@ python3 scripts/deduplicate.py --all
 
 ## Ethics & Responsible Use
 
-⚠️ **IMPORTANT:** These wordlists are for **authorized security testing only**.
+**IMPORTANT:** These wordlists are for authorized security testing only.
 
-### ✅ Acceptable Use
+### Acceptable Use
 - Penetration testing with written authorization
 - Security research on your own systems
 - Educational purposes in controlled environments
 - Password policy analysis and improvement
 - Academic research with ethical approval
 
-### ❌ Unacceptable Use
+### Unacceptable Use
 - Unauthorized access to any system
 - Testing systems without explicit permission
 - Malicious hacking or cybercrime
@@ -377,9 +362,7 @@ See [CLAUDE.md](./CLAUDE.md) for our full philosophy on ethical use.
 
 ## Project Philosophy
 
-This isn't just a collection of text files—it's a **living archive** maintained by the security community.
-
-Read [CLAUDE.md](./CLAUDE.md) to understand our principles:
+Read [CLAUDE.md](./CLAUDE.md) for our principles:
 - Quality over quantity
 - Ethical use only
 - Full transparency
@@ -406,9 +389,9 @@ Want to contribute? See [CONTRIBUTING.md](./CONTRIBUTING.md)!
 This project is licensed under the [MIT License](./LICENSE).
 
 You are free to:
-- ✅ Use for any purpose (commercial or non-commercial)
-- ✅ Modify and create derivatives
-- ✅ Distribute and share
+- Use for any purpose (commercial or non-commercial)
+- Modify and create derivatives
+- Distribute and share
 
 Requirements:
 - Include the license and copyright notice
@@ -420,11 +403,11 @@ Requirements:
 
 If you find this project useful:
 
-⭐ **Star this repository** on GitHub
-🐛 **Report issues** to help us improve
-💡 **Contribute** new wordlists or improvements
-📢 **Share** with the security community
-☕ **Sponsor** via [GitHub Sponsors](https://github.com/sponsors/duyet)
+- Star this repository on GitHub
+- Report issues to help us improve
+- Contribute new wordlists or improvements
+- Share with the security community
+- Sponsor via [GitHub Sponsors](https://github.com/sponsors/duyet)
 
 ---
 
